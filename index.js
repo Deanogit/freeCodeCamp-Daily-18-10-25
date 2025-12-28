@@ -14,38 +14,24 @@ function sockPairs(pairs, cycles) {
 
   let counter = pairs * 2;
 
-  for (let i = 1; i <= cycles; i++) {
+  for (let i = 0; i <= cycles; i++) {
     if (i % 2 === 0) {
       counter--;
-    } else if (i % 3 === 0) {
+    }
+    if (i % 3 === 0) {
       counter++;
-    } else if (i % 5 === 0) {
+    }
+    if (i % 5 === 0) {
       counter--;
-    } else if (i % 10 === 0) {
+    }
+    if (i % 10 === 0) {
       counter + 2;
     }
   }
   console.log(counter);
+  return counter;
 
   // return pairs;
 }
-function sockPairs(pairs, cycles) {
-  console.log(pairs, cycles);
 
-  let counter = pairs * 2;
-
-  for (let i = 1; i <= cycles; i++) {
-    if (i % 2 === 0) {
-      counter--;
-    } else if (i % 3 === 0) {
-      counter++;
-    } else if (i % 5 === 0) {
-      counter--;
-    } else if (i % 10 === 0) {
-      counter + 2;
-    }
-  }
-  console.log(counter);
-
-  // return pairs;
-}
+sockPairs(5, 11);
