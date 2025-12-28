@@ -27,9 +27,9 @@ function sockPairs(pairs, cycles) {
     if (i % 10 === 0) {
       counter += 2;
     }
+    if (counter < 0) return 0;
   }
   console.log(counter);
-  if (counter < 0) return 0;
   return Math.floor(counter / 2);
 
   // return pairs;
