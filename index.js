@@ -14,7 +14,7 @@ function sockPairs(pairs, cycles) {
 
   let counter = pairs * 2;
 
-  for (let i = 0; i <= cycles; i++) {
+  for (let i = 1; i <= cycles; i++) {
     if (i % 2 === 0) {
       counter--;
     }
@@ -25,11 +25,12 @@ function sockPairs(pairs, cycles) {
       counter--;
     }
     if (i % 10 === 0) {
-      counter + 2;
+      counter += 2;
     }
   }
   console.log(counter);
-  return counter;
+  if (counter < 0) return 0;
+  return Math.floor(counter / 2);
 
   // return pairs;
 }
